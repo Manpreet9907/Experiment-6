@@ -1,0 +1,122 @@
+/* Full Page Background */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eef2f7;
+}
+
+/* Center Layout */
+.page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Design */
+.form-container {
+  width: 550px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid #2c3e50;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Labels */
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Inputs */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  border: 1px solid #bdc3c7;
+  font-size: 14px;
+}
+
+/* Inline groups */
+.inline-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #2c3e50;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.success-message {
+  text-align: center;
+  margin-top: 15px;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Form Row Layout */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Left Label (Gender:, Skills:, State:) */
+.form-row > label {
+  width: 120px;
+  font-weight: 600;
+}
+
+/* Right Side Content */
+.inline-options {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Each radio/checkbox + text pair */
+.inline-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;   /* Space between circle and text */
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* Proper size alignment */
+.inline-options input[type="radio"],
+.inline-options input[type="checkbox"] {
+  margin: 0;
+}
