@@ -52,44 +52,15 @@ function Gender({ value, onChange }) {
 
 function State({ value, onChange }) {
   const statesAndUTs = [
-    "Andhra Pradesh",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Chhattisgarh",
-    "Goa",
-    "Gujarat",
-    "Haryana",
-    "Himachal Pradesh",
-    "Jharkhand",
-    "Karnataka",
-    "Kerala",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "Tamil Nadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal",
-
-    // Union Territories
-    "Andaman and Nicobar Islands",
-    "Chandigarh",
-    "Dadra and Nagar Haveli and Daman and Diu",
-    "Delhi",
-    "Jammu and Kashmir",
-    "Ladakh",
-    "Lakshadweep",
-    "Puducherry"
+    "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar",
+    "Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh",
+    "Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra",
+    "Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab",
+    "Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura",
+    "Uttar Pradesh","Uttarakhand","West Bengal",
+    "Andaman and Nicobar Islands","Chandigarh",
+    "Dadra and Nagar Haveli and Daman and Diu","Delhi",
+    "Jammu and Kashmir","Ladakh","Lakshadweep","Puducherry"
   ];
 
   return (
@@ -206,7 +177,6 @@ function Form() {
   };
 
   const [formData, setFormData] = useState(initialState);
-  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -226,13 +196,30 @@ function Form() {
 
   const handleClear = () => {
     setFormData(initialState);
-    setMessage("");
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage("Form submitted successfully! ✅");
-  };
+  e.preventDefault();
+
+  const details = `
+Please confirm your details:
+
+First Name: ${formData.firstName}
+Last Name: ${formData.lastName}
+Gender: ${formData.gender}
+State: ${formData.state}
+Address: ${formData.address}
+Skills: ${formData.skills.join(", ")}
+Date of Birth: ${formData.dob}
+`;
+
+  const confirmSubmit = window.confirm(details);
+
+  if (confirmSubmit) {
+    alert("Form submitted successfully! ✅");
+    setFormData(initialState);
+  }
+};
 
   return (
     <div className="page-container">
@@ -256,8 +243,6 @@ function Form() {
             </button>
           </div>
         </form>
-
-        {message && <p className="success-message">{message}</p>}
       </div>
     </div>
   );
