@@ -5,8 +5,13 @@ In this experiment, we implemented form handling using controlled components in 
 We implemented change event handlers to update state whenever the user entered data. The form submission was handled using an event handler function, which processed the entered values and displayed a success message. This experiment helped us understand how controlled components provide better control, consistency, and predictability in managing user input in React applications.
 
 
-<img width="869" height="729" alt="Screenshot 2026-02-25 002801" src="https://github.com/user-attachments/assets/360e3b7f-4b28-4eb1-8d99-81ef0f0c06d6" />
+
 <img width="721" height="730" alt="Screenshot 2026-02-25 002815" src="https://github.com/user-attachments/assets/fec116d6-7db3-470a-bb8e-7295555712b6" />
+<img width="849" height="730" alt="Screenshot 2026-02-25 101742" src="https://github.com/user-attachments/assets/2d88a88c-d4a8-4b25-a74f-a9bbff271026" />
+
+<img width="691" height="725" alt="Screenshot 2026-02-25 101753" src="https://github.com/user-attachments/assets/8950e300-2647-4c84-9443-ce9123dae7c5" />
+
+
 
 Experiment–2: Client-Side Form Validation
 
